@@ -28,3 +28,6 @@ print ("Hi")
 
 print("super")
 print ("try")
+x=5
+y=3
+print(x+y)
