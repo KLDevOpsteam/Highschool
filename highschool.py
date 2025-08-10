@@ -15,9 +15,7 @@ else:
 fact =1
 for i in range (1,x+1):
     fact = fact*i 
-   # print (fact) 
- 
-    
+   # print (fact)     
 print (fact)
 
 while (x>0):
@@ -25,7 +23,6 @@ while (x>0):
     x=x-1
 
 print ("Hi")
-
 print("super")
 print ("try")
 x=5
