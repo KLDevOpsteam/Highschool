@@ -19,4 +19,6 @@ for i in range (1,x+1):
     
 print (fact)
 
-print("Cool")
+while (x>0):
+    print("cool")
+    x=x-1
