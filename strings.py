@@ -1,0 +1,5 @@
+name = input("what is your name?")
+age =int(input("enter ur age" ))
+print(name.capitalize())
+print(name.upper())
+print (age.is_integer())
