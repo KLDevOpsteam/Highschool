@@ -87,4 +87,16 @@ a=a+5 # No need to change the datatype,
 print(a)
 print(type(a))
 
+#Exercise 1 Calculating area of rectangle
+l=int(input("Enter the length of rectangle"))
+b=int(input("Enter the breadth of the rectangle"))
+print(f"Area of the Rectangle is {l*b}")
+
+#Exercise2 Shopping Cart 
+Item=input("what item you like to buy?")
+Price=float(input("What is the price of item?" ))
+Count=int(input("How many item ?"))
+print(f"Total amount to pay is ${Price*Count}")
+
+
 
