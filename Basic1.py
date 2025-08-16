@@ -89,3 +89,24 @@ elif s==2: # == is comparison operator ,= used for assigning.
 else:
     print("NA")
 
+# Exercise 1 Python calculator
+
+operation=input("Please enter which mathematical operations you want to do?(+,-.*,/)")
+Value1 = float(input("Enter the value"))
+Value2 = float(input("Enter the 2nd value"))
+
+if operation == "+":
+    Answer = Value1 + Value2
+    print(round(Answer,3))
+elif operation == "-":
+    Answer = Value1 - Value2
+    print(round(Answer,3))
+elif operation == "*":
+    Answer = Value1*Value2
+    print(round(Answer,3))
+elif operation == "/":
+        Answer=Value1/Value2
+        print(round(Answer,3))
+else:
+    print("Enter a valid operator")
+
