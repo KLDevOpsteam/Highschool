@@ -75,38 +75,102 @@ print(f"Hypotenuse of the triangle is {round(math.sqrt(pow(length,2)+pow(breadth
 
 
 
+#Logical Operators  - To evaluate Multiple conditions
+#and - both condition must be true
+#or - atleast one condition must be true
+#not - inverse the condition --mostly in boolean
 
 
 
-# if -elseif- else condition
-# can use boolean in if statement.
 
-s= int(input("Enter a value"))
-if s>=5:
-    print(s)
-elif s==2: # == is comparison operator ,= used for assigning.
-    print("2")
+#String Methods
+
+
+name="Anjana" 
+print(len(name))  # to find the no.of letters in a string
+print (name.find("j")) # variable.find("x") will give no. of letters till first occurance of x in the variable #output here is 2-an
+print(name.rfind("n")) #variable.rfind("x") will give no. of letters till last occurance of x in the variable #output here is 4-anja
+#if they could not find any letter the ouput will be -1.
+
+
+# Capitalize
+print(name.capitalize()) # caitalize() make first letter of the word capital.
+print(name.upper()) # .upper() make all letters in upper case
+print(name.lower()) # .lower() make all letters in lower case
+print(name.isdigit())# isdigit is a boolean gives True or false. check the string contain only digits
+print(name.isalpha())# returns True if string is only alphabetical
+ipaddress="102.34.23.99."
+print(ipaddress.count("2"))# count ("x") returns how many x in the string
+ipaddress= ipaddress.replace("102","128") # .repace("x","y") To replace x from a string with y
+print(ipaddress)
+
+
+#Exercise 1 Validate user input
+
+#username not more than 12 chara, not contain spaces, not contain digits
+username= "g"
+#username= input("Enter a username : ")
+if len(username) > 12:
+    print("Username should not contain more than 12 characters")
+elif not username.find(" ") == -1:
+    print("Username should not contain spaces")
+elif not username.isalpha():
+    print("Username should not contain digits")
 else:
-    print("NA")
+    print(f"{username} is accepted")
 
-# Exercise 1 Python calculator
 
-operation=input("Please enter which mathematical operations you want to do?(+,-.*,/)")
-Value1 = float(input("Enter the value"))
-Value2 = float(input("Enter the 2nd value"))
 
-if operation == "+":
-    Answer = Value1 + Value2
-    print(round(Answer,3))
-elif operation == "-":
-    Answer = Value1 - Value2
-    print(round(Answer,3))
-elif operation == "*":
-    Answer = Value1*Value2
-    print(round(Answer,3))
-elif operation == "/":
-        Answer=Value1/Value2
-        print(round(Answer,3))
-else:
-    print("Enter a valid operator")
+
+
+
+# Indexing = Accessing elements of a sequence using [] (indexing operator)
+#[start:end:step]
+
+phno= "9876543210" 
+print(phno[3])
+print(phno[0]) # indexing start with 0
+print(phno[2:6]) # print from 3rd position to 7th position characters
+print(phno[1:10:3]) # print from 1st position to lst position with alternative values: 97531
+print(phno[-2])# [-x] give output last xth position
+print(phno[::-1]) #print characters backward
+
+
+
+#Format specifiers ={value:flags} format a value based on what flags are inserted
+
+price1= 3.14321
+price2 =-7654.98
+price3= 44.67
+
+print(f"price 1 is {price1:.2f}") # flag= :.xf   output the value with 2 decimal point of float
+print (f"price 2 is {price2:9}") #flag= :x output will have x places by adding space infront of real value
+print (f"price 3 is {price3:07}") # flag :0x   output will have x places by adding 0 infront of real value
+print(f"price 1 is {price1:<9}") # flag :<x    output will have x places by adding space after the real value, align to the left
+print (f"price 2 is {price2:>9}") # flag :>x    output will have x places by adding space infront the real value, align to the right
+print (f"price 3 is {price3:^7}") # flag :^x    output will have x places by adding space infront and after the real value, align to the center
+print (f"price 2 is {price2:+}") # flag :+ or : (space)   output with sign
+print (f"price 2 is {price2:,}") #flag :, thousands place separated by ,
+print (f"price 2 is {price2:<+,.2f}") # combination of flags
+
+
+
+
+import time # Time library used for various operations
+
+time.sleep(5) # it helps to delay the pgm to run for 5 seconds
+print("time is up")
+
+# Exercise  Countdown timer
+import time
+
+timer = int(input("Enter the count down time in seconds: "))
+
+for t in range (timer,0, -1): # to count reversely we can give step as -1
+    seconds = t % 60
+    minutes =int(t/60)%60
+    Hours= int(t/3600)
+    print(f"{Hours:02}:{minutes:02}:{seconds:02}")
+    time.sleep(1)
+print("Time is up")
 
