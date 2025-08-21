@@ -57,3 +57,30 @@ print(fruits)
 
 froots = ("Apple","orange","banana","pears","cherry") #Tuple
 print(froots)
+
+
+#Exercise : Shopping cart program
+items=[]
+prices =[]
+quantities=[]
+while True:
+    Items=input("Enter the items to buy: (q for quit)")
+    if Items.lower() == "q":
+        break
+    else:
+        price=float(input (f"price of {Items}?"))
+        quantity=int(input("Enter the no.of packets needed"))
+        items.append(Items)
+        prices.append(price)
+        quantities.append(quantity)
+print ("Your cart !!") 
+print ()
+
+for Item,quantity,price in zip(items,quantities,prices):
+        print(f"{Item:<10}{quantity:<14}{price}")
+TotalAmount=0
+for quantity,price in zip(quantities,prices):
+    Total = quantity*price
+    TotalAmount += Total
+
+print ("Total Amount to pay =",TotalAmount)

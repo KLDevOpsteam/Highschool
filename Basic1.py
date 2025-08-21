@@ -158,7 +158,7 @@ print (f"price 2 is {price2:<+,.2f}") # combination of flags
 
 import time # Time library used for various operations
 
-time.sleep(5) # it helps to delay the pgm to run for 5 seconds
+time.sleep(2) # it helps to delay the pgm to run for 2 seconds
 print("time is up")
 
 # Exercise  Countdown timer
