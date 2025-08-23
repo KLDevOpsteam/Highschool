@@ -135,3 +135,54 @@ for question in Questions:
          print(f"Correct Answer is {answers[question_num]}")
     question_num += 1   
 print(f"Your score is {score} ")
+
+
+#dictionary = A collection of {key:value} pairs . ordered and changeable .No duplicates.
+
+capitals={"KL":"TVM","TN":"CHN","AP":"Amaravathi","KA":"Banglore"}
+# print(dir(capital))  #shows attributes and methods
+# print(help(capitals))  #indepth details
+
+print(capitals.get("KL"))  #get can be used to find the pair of given key
+#print(capitals.get("CHN"))  #we can use only key with .get
+print(capitals.get("Goa"))  # as Goa is not mentioned in dictionary , it will output "None"
+capitals.update({"Bihar":"Patna"}) # .update used to add key-value to dictionary also to change any existing value.
+capitals.update({"AP":"AMR"})
+capitals.pop("KA") # .pop used to remove key-value from a dictionary.
+capitals.popitem() # .popitem() will remove latest added Key- value.
+#capitals.clear()  #.clear() will empty the dictionary.
+print(capitals)
+
+print(capitals.keys()) # .keys will output only keys mentioned in dictionary.
+#for keys in capitals.keys() to iterate keys in a given dictionary 
+print(capitals.values()) # .values will output only values in the dictionary.
+print(capitals.items())  # it will give the keys and values in a dictionary as a 2D list
+for key, value in capitals.items():
+     print (f"{key} - {value}")    # helps to print key and value as a table.
+
+
+#Exercise : Menu  Display
+
+menu={"Menu":"Price in","Panipuri": 30.00,"Bhelpuri":40.00,"Masalapuri":45.00}
+print("   TODAY'S CHATTS!!   ")
+print()
+for puri,price in menu.items():
+     print (f"{puri:^10}  {price:^10} Rs")
+print()
+print("    Enjoy the Flavour    ")
+
+cart=[]
+Total=0
+while True:
+        chatts=input("Enter the chatt you want (Type quit to Exit) : ").capitalize()
+        if chatts=="Quit":
+           break
+        elif menu.get(chatts) is None:
+             print ("Sorry, the selected item is not available")
+        else:
+            cart.append(chatts)
+#print(cart)
+#print(type(menu.get(chatts)))
+for chatts in cart:
+     Total += (menu.get(chatts))
+print(f"Total Amount to pay = {Total}")

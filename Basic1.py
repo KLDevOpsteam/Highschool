@@ -174,3 +174,39 @@ for t in range (timer,0, -1): # to count reversely we can give step as -1
     time.sleep(1)
 print("Time is up")
 
+
+
+
+import random
+#print (help(random))
+print(random.randint(1,10)) #it will print any random integers from the given range.
+low=0
+high=100
+print(random.randint(low,high))# we can specify variable as range
+print(random.random()) # .random gives some random floating point.
+options=["eye","ear","nose"]
+print(random.choice(options))# .choice will give any elements present in the given collection.
+print(random.shuffle(options))# .shuffle used to shuffle the elements in a given LIST.for tuple it won't work.
+
+#Exercise : Number guessing game
+import random
+import math
+guesses=0
+realnum=random.randint(10,20)
+while guesses < 5:
+    guess=input(("Guess a number between 10 to 20: "))
+    if guess.isdigit():
+        guess=int(guess)
+        if 10 <= guess <= 20:
+            if int(guess) == realnum:
+                print("Wow! Your guess is correct.")
+                break
+            else:
+               print("Oops! Too close.")
+            guesses += 1
+        else:
+            print("Please enter number between 10 to 20")
+    else:
+        print("Please enter number between 10 to 20")
+print(f"All your chances is over. The correct value is {realnum}")
+
