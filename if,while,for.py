@@ -132,3 +132,21 @@ for x in range (5):
     for y in range (5):
         print ("<>",end="")
     print()
+
+
+
+
+# Iterables = An object/collection that can return its elements one at a time, allowing it to be iterated over in a loop.
+
+numbers=[1,2,3,4,5]
+evens=(2,4,6,8)
+vowels={"a","e","i","o","u"}
+my_dictionary={"one":1, "Two":2, "Three":3}
+for num in reversed(numbers):  # to print in reverse order.
+    print (num,end=" ")
+for even in evens:
+    print(even,end=" ")
+for vowel in (vowels):  #reverse wont work here because set is unordered.
+    print(vowel,end=" ")
+for keys in my_dictionary.keys():
+    print(keys,end=" ")
